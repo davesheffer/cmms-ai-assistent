@@ -10,67 +10,9 @@ import { createGroq } from "@ai-sdk/groq";
 import { generateText } from "ai";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 
-const groq = createGroq({
-	apiKey: process.env.NEXT_PUBLIC_GROQ_API_KEY,
-});
-
 export default function Home() {
-	const [messages, setMessages] = useState([{ role: "assistant", content: "שלום! כיצד אוכל לעזור לך עם מערכת ה-CMMS שלנו היום?" }]);
 	const [input, setInput] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
-	const [currentText, setCurrentText] = useState(""); // For typewriter effect
-	const chatContainerRef = useRef<HTMLDivElement>(null);
-
-	// Typewriter effect
-	useEffect(() => {
-		const latestMessage = messages[messages.length - 1];
-		if (latestMessage.role === "assistant" && latestMessage.content) {
-			let charIndex = -1;
-			const typeWriter = setInterval(() => {
-				if (charIndex < latestMessage.content.length - 1) {
-					setCurrentText((prev) => prev + latestMessage.content[charIndex]);
-					charIndex++;
-				} else {
-					clearInterval(typeWriter);
-				}
-			});
-
-			return () => clearInterval(typeWriter);
-		}
-	}, [messages]);
-
-	// Smooth scroll effect
-	useEffect(() => {
-		if (chatContainerRef.current) {
-			chatContainerRef.current.scrollTo({
-				top: chatContainerRef.current.scrollHeight,
-				behavior: "smooth",
-			});
-		}
-	}, [messages, currentText]);
-
-	const handleSend = async () => {
-		if (input.trim() && !isLoading) {
-			setIsLoading(true);
-			const userMessage = { role: "user", content: `"answer in hebrew with no exceptions" ${input}` };
-			setMessages((prev) => [...prev, userMessage]);
-			setInput("");
-
-			try {
-				const { text } = await generateText({
-					model: groq("gemma2-9b-it"),
-					prompt: input,
-				});
-				setMessages((prev: any) => [...prev, { role: "assistant", content: text }]);
-				setCurrentText(""); // Reset for the next typewriter effect
-			} catch (error) {
-				console.error("Error calling GROQ:", error);
-				setMessages((prev) => [...prev, { role: "assistant", content: "An error occurred. Please try again later." }]);
-			}
-
-			setIsLoading(false);
-		}
-	};
 
 	return (
 		<div

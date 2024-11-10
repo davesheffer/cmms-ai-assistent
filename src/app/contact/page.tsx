@@ -151,7 +151,7 @@ export default function Component() {
 						<div className="flex flex-col items-center space-y-4 text-center">
 							<div className="space-y-2">
 								<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">מוכנים להתחיל?</h2>
-								<p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">צוות המומחים שלנו מוכן ל��נות על כל שאלותיך ולעזור לך להתחיל עם מערכת ה-CMMS שלנו.</p>
+								<p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">הצוות המומחה שלנו כאן כדי לענות על כל שאלה ולעזור לך להפיק את המקסימום ממערכת ה-CMMS – כי הצלחה מתחילה בתמיכה נכונה.</p>
 							</div>
 							<div className="space-x-4">
 								<Button size="lg">קבע הדגמה</Button>
