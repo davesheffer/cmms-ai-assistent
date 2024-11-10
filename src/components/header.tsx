@@ -3,6 +3,7 @@
 import { Wrench } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+
 export const Header = () => {
 	const headerRef = useRef<HTMLDivElement>(null);
 	useEffect(() => {
@@ -19,7 +20,7 @@ export const Header = () => {
 	}, []);
 	return (
 		<div
-			className="fixed  w-full"
+			className="fixed w-full"
 			ref={headerRef}>
 			<div className="container m-auto">
 				<header className="px-4 lg:px-6 h-14 flex items-center justify-between w-full">
@@ -27,33 +28,33 @@ export const Header = () => {
 						className="flex items-center justify-center gap-2"
 						href="/">
 						<Wrench className="h-6 w-6" />
-						<span className="text-2xl">בילטאין</span>
+						<span className="text-2xl">BuiltIn</span>
 					</Link>
-					<nav className="mr-auto flex gap-4 sm:gap-6">
+					<nav className="ml-auto flex gap-4 sm:gap-6">
 						<Link
 							className="text-sm font-medium hover:underline underline-offset-4"
 							href="/">
-							דף הבית
+							Home
 						</Link>
 						<Link
 							className="text-sm font-medium hover:underline underline-offset-4"
 							href="/about">
-							אודות
+							About
 						</Link>
 						<Link
 							className="text-sm font-medium hover:underline underline-offset-4"
 							href="/features">
-							תכונות
+							Features
 						</Link>
 						<Link
 							className="text-sm font-medium hover:underline underline-offset-4"
 							href="/plans">
-							תמחור
+							Pricing
 						</Link>
 						<Link
 							className="text-sm font-medium hover:underline underline-offset-4"
 							href="/contact">
-							צרו קשר
+							Contact
 						</Link>
 					</nav>
 				</header>

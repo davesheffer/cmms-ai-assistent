@@ -34,29 +34,29 @@ export function AIAssistantChat() {
 	return (
 		<>
 			<Button
-				className="fixed bottom-4 right-4 rounded-full py-6 px-10  shadow-lg "
+				className="fixed bottom-4 right-4 rounded-full py-6 px-10 shadow-lg"
 				onClick={() => setIsOpen(true)}
-				aria-label="פתח צ'אט עם עוזר AI">
-				עוזר AI
+				aria-label="Open AI Assistant Chat">
+				AI Assistant
 				<MessageCircle className="h-6 w-6" />
 			</Button>
 			{isOpen && (
 				<Card
-					className="fixed bottom-20 right-4 w-96  h-[600px] shadow-xl flex flex-col"
-					dir="rtl">
+					className="fixed bottom-20 right-4 w-96 h-[600px] shadow-xl flex flex-col"
+					dir="ltr">
 					<CardHeader className="flex flex-row items-center justify-between">
-						<CardTitle>עוזר AI</CardTitle>
+						<CardTitle>AI Assistant</CardTitle>
 						<Button
 							variant="ghost"
 							size="icon"
 							onClick={() => setIsOpen(false)}>
 							<X className="h-4 w-4" />
-							<span className="sr-only">סגור</span>
+							<span className="sr-only">Close</span>
 						</Button>
 					</CardHeader>
 					<CardContent className="flex-grow overflow-auto">
 						<div className={`justify-start mb-4`}>
-							<div className={`rounded-lg p-2 max-w-[100%]  bg-blue-300 `}>אני כאן כדי לעזור לך עם מערכת ה-CMMS שלנו. תוכל לשאול אותי שאלות ואנסה לעזור לך בכל דבר שתרצה.</div>
+							<div className={`rounded-lg p-2 max-w-[100%] bg-blue-300`}>I'm here to help you with our CMMS. Feel free to ask any questions, and I'll do my best to assist.</div>
 						</div>
 						<div className="space-y-4">
 							{messages.map((message, index) => (
@@ -76,7 +76,7 @@ export function AIAssistantChat() {
 							onSubmit={handleSubmit}
 							className="flex w-full items-center space-x-2">
 							<Input
-								placeholder="הקלד את הודעתך..."
+								placeholder="Type your message..."
 								value={input}
 								onChange={handleInputChange}
 								disabled={isLoading}
@@ -87,7 +87,7 @@ export function AIAssistantChat() {
 								size="icon"
 								disabled={isLoading}>
 								{isLoading ? <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-white"></div> : <Send className="h-4 w-4" />}
-								<span className="sr-only">שלח</span>
+								<span className="sr-only">Send</span>
 							</Button>
 						</form>
 					</CardFooter>

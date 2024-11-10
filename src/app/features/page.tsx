@@ -10,30 +10,30 @@ export default function Features() {
 	return (
 		<div
 			className="flex flex-col min-h-screen"
-			dir="rtl">
+			dir="ltr">
 			<main className="flex-1">
 				<AnimatedSection
-					pageName="תכונות מערכת ה-CMMS שלנו"
-					paragraph="גלה כיצד הפתרון שלנו יכול לשפר את יעילות התחזוקה ולהפחית זמני השבתה"
+					pageName="Features of Our CMMS"
+					paragraph="Discover how our solution can enhance maintenance efficiency and reduce downtime."
 				/>
 
 				<section
 					id="asset-management"
 					className="w-full py-12 md:py-24 lg:py-32">
 					<div className="container mx-auto px-4 md:px-6">
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">ניהול נכסים</h2>
+						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">Asset Management</h2>
 						<Card>
 							<CardHeader>
-								<CardTitle>מעקב מקיף אחר נכסים</CardTitle>
+								<CardTitle>Comprehensive Asset Tracking</CardTitle>
 								<ClipboardList className="w-8 h-8 mb-2" />
 							</CardHeader>
 							<CardContent>
-								<p>המערכת שלנו מאפשרת לך לנהל ולעקוב אחר כל הנכסים שלך במקום אחד מרכזי. תכונות כוללות:</p>
+								<p>Our system allows you to manage and track all your assets in one central place. Features include:</p>
 								<ul className="list-disc list-inside mt-4 space-y-2">
-									<li>ניהול מלאי מפורט</li>
-									<li>מעקב אחר מיקום נכסים</li>
-									<li>היסטוריית תחזוקה לכל נכס</li>
-									<li>מעקב אחר אחריות וחוזי שירות</li>
+									<li>Detailed inventory management</li>
+									<li>Asset location tracking</li>
+									<li>Maintenance history for each asset</li>
+									<li>Warranty and service contract tracking</li>
 								</ul>
 							</CardContent>
 						</Card>
@@ -43,19 +43,19 @@ export default function Features() {
 					id="work-orders"
 					className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
 					<div className="container mx-auto px-4 md:px-6">
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">מערכת הזמנות עבודה</h2>
+						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">Work Order System</h2>
 						<Card>
 							<CardHeader>
-								<CardTitle>ניהול משימות תחזוקה יעיל</CardTitle>
+								<CardTitle>Efficient Maintenance Task Management</CardTitle>
 								<Wrench className="w-8 h-8 mb-2" />
 							</CardHeader>
 							<CardContent>
-								<p>מערכת הזמנות העבודה שלנו מייעלת את תהליכי התחזוקה שלך:</p>
+								<p>Our work order system streamlines your maintenance processes:</p>
 								<ul className="list-disc list-inside mt-4 space-y-2">
-									<li>יצירה וניהול קלים של הזמנות עבודה</li>
-									<li>הקצאת משימות אוטומטית לצוותים או טכנאים</li>
-									<li>מעקב אחר סטטוס בזמן אמת</li>
-									<li>תיעוד של חלקי חילוף ועבודה</li>
+									<li>Easy creation and management of work orders</li>
+									<li>Automatic task assignment to teams or technicians</li>
+									<li>Real-time status tracking</li>
+									<li>Documentation of spare parts and labor</li>
 								</ul>
 							</CardContent>
 						</Card>
@@ -65,19 +65,19 @@ export default function Features() {
 					id="preventive-maintenance"
 					className="w-full py-12 md:py-24 lg:py-32">
 					<div className="container mx-auto px-4 md:px-6">
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">תחזוקה מונעת</h2>
+						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">Preventive Maintenance</h2>
 						<Card>
 							<CardHeader>
-								<CardTitle>תזמון ואוטומציה של תחזוקה</CardTitle>
+								<CardTitle>Maintenance Scheduling and Automation</CardTitle>
 								<Bell className="w-8 h-8 mb-2" />
 							</CardHeader>
 							<CardContent>
-								<p>מערכת התחזוקה המונעת שלנו עוזרת לך למנוע תקלות לפני שהן מתרחשות:</p>
+								<p>Our preventive maintenance system helps you prevent breakdowns before they occur:</p>
 								<ul className="list-disc list-inside mt-4 space-y-2">
-									<li>תזמון אוטומטי של משימות תחזוקה שגרתיות</li>
-									<li>התראות ותזכורות לפעילויות תחזוקה קרובות</li>
-									<li>מעקב אחר מחזורי חיים של ציוד</li>
-									<li>ניתוח מגמות לזיהוי בעיות פוטנציאליות</li>
+									<li>Automatic scheduling of routine maintenance tasks</li>
+									<li>Alerts and reminders for upcoming maintenance activities</li>
+									<li>Equipment lifecycle tracking</li>
+									<li>Trend analysis to identify potential issues</li>
 								</ul>
 							</CardContent>
 						</Card>
@@ -87,19 +87,19 @@ export default function Features() {
 					id="reporting"
 					className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
 					<div className="container mx-auto px-4 md:px-6">
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">דיווח ואנליטיקה</h2>
+						<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">Reporting & Analytics</h2>
 						<Card>
 							<CardHeader>
-								<CardTitle>תובנות עסקיות מעמיקות</CardTitle>
+								<CardTitle>In-depth Business Insights</CardTitle>
 								<BarChart className="w-8 h-8 mb-2" />
 							</CardHeader>
 							<CardContent>
-								<p>כלי הדיווח והאנליטיקה שלנו מספקים תובנות חיוניות לביצועי התחזוקה שלך:</p>
+								<p>Our reporting and analytics tools provide essential insights into your maintenance performance:</p>
 								<ul className="list-disc list-inside mt-4 space-y-2">
-									<li>דוחות מותאמים אישית וניתנים להתאמה</li>
-									<li>לוחות מחוונים בזמן אמת</li>
-									<li>ניתוח מגמות וחיזוי</li>
-									<li>מדדי KPI לביצועי תחזוקה</li>
+									<li>Customizable reports</li>
+									<li>Real-time dashboards</li>
+									<li>Trend analysis and forecasting</li>
+									<li>Maintenance performance KPIs</li>
 								</ul>
 							</CardContent>
 						</Card>
@@ -107,17 +107,17 @@ export default function Features() {
 				</section>
 			</main>
 			<footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-				<p className="text-xs text-gray-500 dark:text-gray-400">© 2024 מערכת CMMS. כל הזכויות שמורות.</p>
+				<p className="text-xs text-gray-500 dark:text-gray-400">© 2024 CMMS System. All rights reserved.</p>
 				<nav className="sm:mr-auto flex gap-4 sm:gap-6">
 					<Link
 						className="text-xs hover:underline underline-offset-4"
 						href="#">
-						תנאי שימוש
+						Terms of Service
 					</Link>
 					<Link
 						className="text-xs hover:underline underline-offset-4"
 						href="#">
-						פרטיות
+						Privacy Policy
 					</Link>
 				</nav>
 			</footer>

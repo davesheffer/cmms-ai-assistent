@@ -1,14 +1,11 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Wrench, ClipboardList, Bell, BarChart, Send } from "lucide-react";
 import Link from "next/link";
-import { createGroq } from "@ai-sdk/groq";
-import { generateText } from "ai";
-import MarkdownRenderer from "@/components/MarkdownRenderer";
 
 export default function Home() {
 	const [input, setInput] = useState("");
@@ -17,23 +14,23 @@ export default function Home() {
 	return (
 		<div
 			className="flex flex-col min-h-screen"
-			dir="rtl">
+			dir="ltr">
 			<main className="flex-1">
 				<section
 					className="w-full py-12 md:py-24 lg:py-32 xl:py-48"
 					style={{ backgroundImage: 'url("/back.jpeg")', backgroundPosition: "center", backgroundSize: "cover" }}>
 					<div className="container m-auto px-4 md:px-6">
-						<div className="flex flex-col items-center space-y-16  text-center">
+						<div className="flex flex-col items-center space-y-16 text-center">
 							<div className="space-y-2">
-								<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">ייעל את התחזוקה שלך עם מערכת ה-CMMS שלנו</h1>
-								<p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">יעילה. אינטואיטיבית. עוצמתית. קח שליטה על פעולות התחזוקה שלך עם פתרון ה-CMMS המתקדם שלנו.</p>
+								<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">Optimize Your Maintenance with Our CMMS</h1>
+								<p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">Efficient. Intuitive. Powerful. Take control of your maintenance operations with our advanced CMMS solution.</p>
 							</div>
 							<div className="space-x-4 flex gap-6">
-								<Button className="px-10 py-6">התחל עכשיו</Button>
+								<Button className="px-10 py-6">Get Started</Button>
 								<Button
 									variant="outline"
 									className="px-10 py-6">
-									למד עוד
+									Learn More
 								</Button>
 							</div>
 						</div>
@@ -41,42 +38,42 @@ export default function Home() {
 				</section>
 				<section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
 					<div className="container m-auto px-4 md:px-6">
-						<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">תכונות מרכזיות</h2>
+						<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Key Features</h2>
 						<div className="grid gap-6 items-center md:grid-cols-2 lg:grid-cols-2">
 							<Card>
 								<CardHeader>
-									<CardTitle>ניהול נכסים</CardTitle>
+									<CardTitle>Asset Management</CardTitle>
 									<ClipboardList className="w-8 h-8 mb-2" />
 								</CardHeader>
 								<CardContent>
-									<p>עקוב ונהל את כל הנכסים שלך במקום אחד.</p>
+									<p>Track and manage all your assets in one place.</p>
 								</CardContent>
 							</Card>
 							<Card>
 								<CardHeader>
-									<CardTitle>מערכת הזמנות עבודה</CardTitle>
+									<CardTitle>Work Order System</CardTitle>
 									<Wrench className="w-8 h-8 mb-2" />
 								</CardHeader>
 								<CardContent>
-									<p>ייעל משימות תחזוקה ותהליכי עבודה.</p>
+									<p>Streamline maintenance tasks and workflows.</p>
 								</CardContent>
 							</Card>
 							<Card>
 								<CardHeader>
-									<CardTitle>תחזוקה מונעת</CardTitle>
+									<CardTitle>Preventive Maintenance</CardTitle>
 									<Bell className="w-8 h-8 mb-2" />
 								</CardHeader>
 								<CardContent>
-									<p>תזמן ואוטומט תחזוקה שגרתית.</p>
+									<p>Schedule and automate routine maintenance.</p>
 								</CardContent>
 							</Card>
 							<Card>
 								<CardHeader>
-									<CardTitle>דיווח ואנליטיקה</CardTitle>
+									<CardTitle>Reporting & Analytics</CardTitle>
 									<BarChart className="w-8 h-8 mb-2" />
 								</CardHeader>
 								<CardContent>
-									<p>קבל תובנות עם כלי דיווח עוצמתיים.</p>
+									<p>Gain insights with powerful reporting tools.</p>
 								</CardContent>
 							</Card>
 						</div>
@@ -84,17 +81,17 @@ export default function Home() {
 				</section>
 			</main>
 			<footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-				<p className="text-xs text-gray-500 dark:text-gray-400">© 2024 מערכת CMMS. כל הזכויות שמורות.</p>
+				<p className="text-xs text-gray-500 dark:text-gray-400">© 2024 CMMS System. All rights reserved.</p>
 				<nav className="sm:mr-auto flex gap-4 sm:gap-6">
 					<Link
 						className="text-xs hover:underline underline-offset-4"
 						href="#">
-						תנאי שימוש
+						Terms of Service
 					</Link>
 					<Link
 						className="text-xs hover:underline underline-offset-4"
 						href="#">
-						פרטיות
+						Privacy Policy
 					</Link>
 				</nav>
 			</footer>

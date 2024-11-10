@@ -10,114 +10,114 @@ export default function Component() {
 	return (
 		<div
 			className="flex flex-col min-h-screen"
-			dir="rtl">
+			dir="ltr">
 			<main className="flex-1">
 				<AnimatedSection
-					pageName="התוכניות והמחירים שלנו"
-					paragraph="בחר את התוכנית המותאמת לך, וקבל מקסימום ערך ותמיכה."
+					pageName="Our Plans and Pricing"
+					paragraph="Choose the plan that's right for you and get maximum value and support."
 				/>
 				<section className="w-full py-12 md:py-24 lg:py-32">
-					<div className="container m-auto  px-4 md:px-6">
+					<div className="container m-auto px-4 md:px-6">
 						<div className="grid gap-6 lg:grid-cols-3">
 							<Card>
 								<CardHeader>
-									<CardTitle>בסיסי</CardTitle>
-									<CardDescription>לעסקים קטנים ובינוניים</CardDescription>
+									<CardTitle>Basic</CardTitle>
+									<CardDescription>For small to medium businesses</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<div className="text-4xl font-bold">₪199</div>
-									<div className="text-sm text-gray-500 dark:text-gray-400">לחודש</div>
+									<div className="text-sm text-gray-500 dark:text-gray-400">per month</div>
 									<ul className="mt-4 space-y-2">
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											עד 500 נכסים
+											Up to 500 assets
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											ניהול הזמנות עבודה
+											Work order management
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											תחזוקה מונעת בסיסית
+											Basic preventive maintenance
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											דוחות סטנדרטיים
+											Standard reports
 										</li>
 									</ul>
 								</CardContent>
 								<CardFooter>
-									<Button className="w-full">בחר תוכנית</Button>
+									<Button className="w-full">Choose Plan</Button>
 								</CardFooter>
 							</Card>
 							<Card>
 								<CardHeader>
-									<CardTitle>מקצועי</CardTitle>
-									<CardDescription>לארגונים גדולים</CardDescription>
+									<CardTitle>Professional</CardTitle>
+									<CardDescription>For large organizations</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<div className="text-4xl font-bold">₪499</div>
-									<div className="text-sm text-gray-500 dark:text-gray-400">לחודש</div>
+									<div className="text-sm text-gray-500 dark:text-gray-400">per month</div>
 									<ul className="mt-4 space-y-2">
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											נכסים ללא הגבלה
+											Unlimited assets
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											ניהול הזמנות עבודה מתקדם
+											Advanced work order management
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											תחזוקה מונעת מתקדמת
+											Advanced preventive maintenance
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											דוחות מותאמים אישית
+											Custom reports
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											אינטגרציה עם מערכות ERP
+											ERP integration
 										</li>
 									</ul>
 								</CardContent>
 								<CardFooter>
-									<Button className="w-full">בחר תוכנית</Button>
+									<Button className="w-full">Choose Plan</Button>
 								</CardFooter>
 							</Card>
 							<Card>
 								<CardHeader>
-									<CardTitle>ארגוני</CardTitle>
-									<CardDescription>לתאגידים גדולים ורב-אתריים</CardDescription>
+									<CardTitle>Enterprise</CardTitle>
+									<CardDescription>For large, multi-site corporations</CardDescription>
 								</CardHeader>
 								<CardContent>
-									<div className="text-4xl font-bold">התאמה אישית</div>
-									<div className="text-sm text-gray-500 dark:text-gray-400">צור קשר לקבלת הצעת מחיר</div>
+									<div className="text-4xl font-bold">Custom Pricing</div>
+									<div className="text-sm text-gray-500 dark:text-gray-400">Contact us for a quote</div>
 									<ul className="mt-4 space-y-2">
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											כל התכונות של התוכנית המקצועית
+											All features of the Professional plan
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											פתרונות מותאמים אישית
+											Custom solutions
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											תמיכה 24/7
+											24/7 support
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											מנהל חשבון ייעודי
+											Dedicated account manager
 										</li>
 										<li className="flex items-center">
 											<CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-											הדרכה והטמעה מקיפה
+											Comprehensive training and implementation
 										</li>
 									</ul>
 								</CardContent>
 								<CardFooter>
-									<Button className="w-full">צור קשר</Button>
+									<Button className="w-full">Contact Us</Button>
 								</CardFooter>
 							</Card>
 						</div>
@@ -127,15 +127,15 @@ export default function Component() {
 					<div className="container m-auto px-4 md:px-6">
 						<div className="flex flex-col items-center space-y-4 text-center">
 							<div className="space-y-2">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">עדיין לא בטוח?</h2>
-								<p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">צוות המומחים שלנו ישמח לעזור לך לבחור את התוכנית המתאימה ביותר לצרכי הארגון שלך.</p>
+								<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Still Unsure?</h2>
+								<p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">Our team of experts is happy to help you choose the best plan for your organization's needs.</p>
 							</div>
 							<div className="space-x-4">
-								<Button size="lg">תאם שיחת ייעוץ</Button>
+								<Button size="lg">Schedule a Consultation</Button>
 								<Button
 									variant="outline"
 									size="lg">
-									צפה בהדגמה
+									View Demo
 								</Button>
 							</div>
 						</div>
@@ -143,17 +143,17 @@ export default function Component() {
 				</section>
 			</main>
 			<footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-				<p className="text-xs text-gray-500 dark:text-gray-400">© 2024 מערכת CMMS. כל הזכויות שמורות.</p>
+				<p className="text-xs text-gray-500 dark:text-gray-400">© 2024 CMMS System. All rights reserved.</p>
 				<nav className="sm:mr-auto flex gap-4 sm:gap-6">
 					<Link
 						className="text-xs hover:underline underline-offset-4"
 						href="#">
-						תנאי שימוש
+						Terms of Service
 					</Link>
 					<Link
 						className="text-xs hover:underline underline-offset-4"
 						href="#">
-						פרטיות
+						Privacy Policy
 					</Link>
 				</nav>
 			</footer>

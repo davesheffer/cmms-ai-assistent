@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
 	const defaultMessage = {
 		role: "system",
-		content: " התמקד בנושא CMMS. ענה בעברית בצורה קצרה וממוקדת לא יותר מ20 מילים.",
+		content: "make the answers on CMMS and maintanance short not more then 30 words concise and easy to understand",
 	};
 
 	const messages = [defaultMessage, ...userMessages];
