@@ -1,6 +1,6 @@
 # CMMS Chat API
 
-A Next.js API for a CMMS-focused chat, responding in Hebrew with GROQ integration.
+A Next.js API for a CMMS-focused chat, responding with GROQ integration.
 
 ## Setup
 
