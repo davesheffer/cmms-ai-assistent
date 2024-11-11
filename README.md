@@ -29,7 +29,7 @@ A Next.js API for a CMMS-focused chat, responding in Hebrew with GROQ integratio
 ## API Endpoint
 
 - **POST /api/chat**  
-  Send chat messages with a focus on CMMS. Responds in Hebrew, limited to 20 words.
+  Send chat messages with a focus on CMMS. Responds in English, limited to 30 words.
 
 ## Deployment
 
