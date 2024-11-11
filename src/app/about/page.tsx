@@ -85,32 +85,25 @@ export default function About() {
 								<p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">Join thousands of our satisfied customers and start experiencing the benefits of smart maintenance management.</p>
 							</div>
 							<div className="space-x-4">
-								<Button size="lg">Schedule a Demo</Button>
-								<Button
-									variant="outline"
-									size="lg">
-									Contact Us
-								</Button>
+								<Link
+									href="/contact"
+									passHref>
+									<Button size="lg">Schedule a Demo</Button>
+								</Link>
+								<Link
+									href="/contact"
+									passHref>
+									<Button
+										variant="outline"
+										size="lg">
+										Contact Us
+									</Button>
+								</Link>
 							</div>
 						</div>
 					</div>
 				</section>
 			</main>
-			<footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-				<p className="text-xs text-gray-500 dark:text-gray-400">© 2024 CMMS System. All rights reserved.</p>
-				<nav className="sm:mr-auto flex gap-4 sm:gap-6">
-					<Link
-						className="text-xs hover:underline underline-offset-4"
-						href="#">
-						Terms of Service
-					</Link>
-					<Link
-						className="text-xs hover:underline underline-offset-4"
-						href="#">
-						Privacy Policy
-					</Link>
-				</nav>
-			</footer>
 		</div>
 	);
 }

@@ -8,9 +8,6 @@ import { Wrench, ClipboardList, Bell, BarChart, Send } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
-	const [input, setInput] = useState("");
-	const [isLoading, setIsLoading] = useState(false);
-
 	return (
 		<div
 			className="flex flex-col min-h-screen"
@@ -26,12 +23,20 @@ export default function Home() {
 								<p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">Efficient. Intuitive. Powerful. Take control of your maintenance operations with our advanced CMMS solution.</p>
 							</div>
 							<div className="space-x-4 flex gap-6">
-								<Button className="px-10 py-6">Get Started</Button>
-								<Button
-									variant="outline"
-									className="px-10 py-6">
-									Learn More
-								</Button>
+								<Link
+									href="/contact"
+									passHref>
+									<Button className="px-10 py-6">Get Started</Button>
+								</Link>
+								<Link
+									href="/about"
+									passHref>
+									<Button
+										variant="outline"
+										className="px-10 py-6">
+										Learn More
+									</Button>
+								</Link>
 							</div>
 						</div>
 					</div>
