@@ -15,25 +15,25 @@ A Next.js API for a CMMS-focused chat, responding with GROQ integration.
    npm install
    ```
 
-3. **Environment Variables:**  
-   Set up a `.env.local` file with the following:
-   ```plaintext
-   GROQ_API_KEY=your_private_key_here
-   ```
-
 4. **Run the development server:**
    ```bash
    npm run dev
    ```
+3. Add Environment Variables:
+After initializing , you can add the required environment variables:
+
+   - `GROQ_API_KEY`: Your GROQ API key value.
+   - `SMTP_SERVER_HOST`: Your SMTP server host.
+   - `SMTP_SERVER_USERNAME`: The SMTP server username.
+   - `SMTP_SERVER_PASSWORD`: The SMTP server password.
+   - `SITE_MAIL_RECIEVER`: The email address to receive the site mail.
 
 ## API Endpoint
 
 - **POST /api/chat**  
   Send chat messages with a focus on CMMS. Responds in English, limited to 30 words.
 
-## Deployment
 
-Deploy on Vercel and add `GROQ_API_KEY` in Vercel environment variables.
 
 ---
 
