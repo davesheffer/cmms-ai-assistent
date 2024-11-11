@@ -1,16 +1,15 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useMediaQuery } from "react-responsive";
 import Link from "next/link";
 import { Wrench, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { VisuallyHidden } from "@/components/ui/visually-hidden";
 
 export default function Header() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const headerRef = useRef<HTMLDivElement>(null);
-	const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -37,7 +36,7 @@ export default function Header() {
 
 	return (
 		<div
-			className="fixed w-full z-10 transition-colors duration-300"
+			className="fixed w-full z-10 transition-colors duration-300 z-10"
 			ref={headerRef}>
 			<div className="container mx-auto">
 				<header className="px-4 lg:px-6 h-14 flex items-center justify-between w-full">
@@ -47,7 +46,17 @@ export default function Header() {
 						<Wrench className="h-6 w-6" />
 						<span className="text-2xl font-bold">BuiltIn</span>
 					</Link>
-					{isMobile ? (
+					<nav className="hidden sm:flex ml-auto gap-4 sm:gap-6">
+						{navItems.map((item) => (
+							<Link
+								key={item.href}
+								className="text-sm font-medium hover:underline underline-offset-4"
+								href={item.href}>
+								{item.label}
+							</Link>
+						))}
+					</nav>
+					<div className="sm:hidden">
 						<Sheet
 							open={isMobileMenuOpen}
 							onOpenChange={setIsMobileMenuOpen}>
@@ -62,6 +71,9 @@ export default function Header() {
 							<SheetContent
 								side="right"
 								className="w-[240px] sm:w-[300px]">
+								<VisuallyHidden>
+									<SheetTitle>Navigation Menu</SheetTitle>
+								</VisuallyHidden>
 								<nav className="flex flex-col gap-4">
 									{navItems.map((item) => (
 										<Link
@@ -75,18 +87,7 @@ export default function Header() {
 								</nav>
 							</SheetContent>
 						</Sheet>
-					) : (
-						<nav className="ml-auto flex gap-4 sm:gap-6">
-							{navItems.map((item) => (
-								<Link
-									key={item.href}
-									className="text-sm font-medium hover:underline underline-offset-4"
-									href={item.href}>
-									{item.label}
-								</Link>
-							))}
-						</nav>
-					)}
+					</div>
 				</header>
 			</div>
 		</div>

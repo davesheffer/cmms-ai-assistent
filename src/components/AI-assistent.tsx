@@ -34,15 +34,15 @@ export function AIAssistantChat() {
 	return (
 		<>
 			<Button
-				className="fixed bottom-4 right-4 rounded-full py-6 px-10 shadow-lg"
+				className="fixed bottom-4 right-4 rounded-full py-3 px-5 md:py-6 md:px-10 shadow-lg z-10"
 				onClick={() => setIsOpen(true)}
 				aria-label="Open AI Assistant Chat">
-				AI Assistant
+				<span className="">AI Assistant</span>
 				<MessageCircle className="h-6 w-6" />
 			</Button>
 			{isOpen && (
 				<Card
-					className="fixed bottom-20 right-4 w-96 h-[600px] shadow-xl flex flex-col"
+					className="fixed bottom-20 right-4 w-96 h-[500px] md:h-[600px] shadow-xl flex flex-col"
 					dir="ltr">
 					<CardHeader className="flex flex-row items-center justify-between">
 						<CardTitle>AI Assistant</CardTitle>
@@ -71,20 +71,21 @@ export function AIAssistantChat() {
 							))}
 						</div>
 					</CardContent>
-					<CardFooter>
+					<CardFooter className="bg-green-100 shadow-neutral-100">
 						<form
 							onSubmit={handleSubmit}
-							className="flex w-full items-center space-x-2">
+							className="flex w-full items-center space-x-6 pt-4">
 							<Input
 								placeholder="Type your message..."
 								value={input}
 								onChange={handleInputChange}
 								disabled={isLoading}
-								className="flex-grow"
+								className="flex-grow bg-white dark:bg-gray-800 border-none shadow-md"
 							/>
 							<Button
 								type="submit"
 								size="icon"
+								className="cursor-pointer p-4 bg-green-500 text-white rounded-full"
 								disabled={isLoading}>
 								{isLoading ? <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-white"></div> : <Send className="h-4 w-4" />}
 								<span className="sr-only">Send</span>
